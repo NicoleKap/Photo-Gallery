@@ -110,7 +110,7 @@ a:hover {
 }
 
 #aside-left {
-  width: 300px; /* Να το αλλάξω */
+  width: 300px;
   font-family: "Dancing Script", cursive;
   font-size: 25px;
   font-weight: bold;
@@ -167,5 +167,13 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  #aside-left {
+    width: 100vw;
+  }
+
+  #aside-right {
+    width: 100vw;
   }
 }
