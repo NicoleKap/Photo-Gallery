@@ -1,0 +1,171 @@
+aside,
+header,
+footer {
+  border: 8px solid transparent; /*It defines the width of border and its transparency */
+  border-image: url(./images/pngtree-fancy-frame-neon-light-effect-border-element-png-image_1992790.jpg)
+    70 round; /* Sets the background image for the border and specifies how it should be applied (round) */
+  padding: 20px; /* Adds space inside the border so that the content is not too close to the flowers */
+}
+
+body {
+  box-sizing: border-box;
+  background-image: url(./images/stock-photo-abstract-holiday-background.png); /* Sets a background image */
+  background-size: cover; /* It covers all the screen */
+  background-attachment: fixed; /* It makes the image fixed! No scroll-down in order to see the image */
+  background-position: center; /* It centers the image */
+  background-repeat: no-repeat; /* It prevents image from repetetion */
+  display: grid; /* It creates columns and rows (grid) */
+  grid-template-areas: /* Defines the columns of the grid (3 columns: 2 of them {header, footer} are merged) */
+    "header header header"
+    "sidebar-contents main sidebad-ads"
+    "footer footer footer";
+  gap: 10px; /* Distance between  grid-items*/
+}
+
+header {
+  font-family: "Dancing Script", cursive; /* The font we have used */
+  font-size: 20px; /* Text size */
+  text-align: center;
+  background-image: url(https://www.freewebheaders.com/wp-content/gallery/natural-abstract/autumn-leaves-abstract-natural-paiting-header-1280x375.jpg);
+  background-size: cover;
+  grid-area: header;
+}
+
+main {
+  display: flex;
+  grid-area: main;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer {
+  background-color: rgb(255, 152, 117);
+  grid-area: footer;
+  text-align: center;
+  padding: 30px;
+}
+
+img {
+  width: 450px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 25px;
+  border: 10px ridge rgb(248, 152, 117);
+  margin: 20px;
+}
+
+.Ads {
+  width: 200px;
+  height: 100px;
+  margin: 5px;
+  border: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.hidden {
+  font-family: "Dancing Script", cursive;
+  visibility: hidden;
+  border: 10px ridge rgb(248, 152, 117);
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 5px black;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.hover-items:hover {
+  img {
+    width: 600px;
+    height: 400px;
+    transition: all 2s;
+  }
+  .hidden {
+    visibility: visible;
+    border-radius: 25px;
+    letter-spacing: 10px;
+    transition: all 2s;
+    padding: 0;
+  }
+}
+
+a:hover {
+  font-size: 110%; /* It maximize the font-size after hovering */
+  font-weight: bold;
+  background-color: rgb(248, 152, 117);
+  width: fit-content;
+  padding: 0 10px;
+}
+
+#aside-left {
+  width: 300px; /* Να το αλλάξω */
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#aside-right {
+  width: 300px;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.arrow-down {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(45deg);
+}
+
+.navigation-link {
+  margin-top: 20px;
+  text-decoration: none;
+}
+.contents {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  margin: 10px 0;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "sidebar-contents"
+      "main"
+      "sidebar-ads";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
